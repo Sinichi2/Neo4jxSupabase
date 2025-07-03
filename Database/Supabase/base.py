@@ -11,6 +11,6 @@ key: str = os.getenv('SUPABASE_API')
 #Creating the supabase client 
 supabase: Client = create_client(url, key)
 
-response = (
-    supabase.table()
-)
+# Fetch data from Supabase
+response = supabase.table("users").select("*").execute()
+users = response.data

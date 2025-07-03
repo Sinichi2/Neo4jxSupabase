@@ -1,1 +1,1 @@
-from .Supabase import 
+from supabase import create_client
